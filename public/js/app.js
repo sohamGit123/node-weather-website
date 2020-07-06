@@ -1,14 +1,5 @@
 //console.log("Client side javascript file is loaded")
 
-// fetch('http://localhost:3000/weather?address=!').then((res)=>{
-//     res.json().then((data)=>{
-//         if(data.error){
-//             return console.log(data.error)
-//         }
-//         console.log(data)
-//     })
-// })
-
 const weatherForm=document.querySelector('form')
 const searchElement=document.querySelector('input')
 const messageOne=document.querySelector('#message-1')
