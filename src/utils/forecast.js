@@ -10,7 +10,8 @@ const forecast=(long,lat,callback)=>{
             temp=body.current.temperature
             apparent_temp=body.current.feelslike
             weather_desc=body.current.weather_descriptions[0]
-            msg=weather_desc+". It is currently "+temp+" degrees out. It feels like "+apparent_temp+" degrees out."
+            humidity=body.current.humidity
+            msg=weather_desc+". It is currently "+temp+" degrees out. It feels like "+apparent_temp+" degrees out." + " The humidity is " + humidity + "%."
             callback(undefined,msg)
         }
     })
