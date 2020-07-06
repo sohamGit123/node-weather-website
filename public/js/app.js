@@ -14,12 +14,12 @@ weatherForm.addEventListener('submit',(e)=>{
     messageOne.textContent='Loading...'
     messageTwo.textContent=''
 
-    var internet=false
-    var reached=false
+    // var internet=false
+    // var reached=false
     fetch(url).then((res)=>{
         res.json().then((data)=>{
             if(data.error){
-                reached=true
+                //reached=true
                 messageOne.textContent=data.error
                 return console.log(data.error)
             }
@@ -27,12 +27,12 @@ weatherForm.addEventListener('submit',(e)=>{
             messageTwo.textContent=data.forecast
             console.log(data.location)
             console.log(data.forecast)
-            internet=true
-            reached=true
+            // internet=true
+            // reached=true
         })
     })
 
-    if(internet!=true && reached!=true){
-        messageOne.textContent='Check your internet connection!'
-    }
+    // if(internet!=true && reached!=true){
+    //     messageOne.textContent='Check your internet connection!'
+    // }
 })
