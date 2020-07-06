@@ -28,6 +28,7 @@ weatherForm.addEventListener('submit',(e)=>{
             console.log(data.location)
             console.log(data.forecast)
             internet=true
+            reached=true
         })
     })
 
